@@ -18,7 +18,7 @@ export default {
     },
     photoContents: {
         flexDirection: 'row',
-        marginRight: -55,
+        marginRight: -20,
     },
     photoInfo: {
         marginRight: 10,
@@ -50,7 +50,7 @@ export default {
     },
     popupContents: {
         flexDirection: 'row',
-        marginRight: '-56%',
+        marginRight: '-45%',
         marginBottom: 20,
         paddingTop: 10,
     },

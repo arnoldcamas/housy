@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 import numeral from 'numeral';
+import { Icon } from 'native-base';
 import styles from './styles';
 
   // generate random numbers
@@ -36,16 +37,16 @@ class PopupDialog extends Component {
                     />
                     <View style={styles.popupContents}>
                       <View style={{ marginRight: 10 }} >
-                          <Text style={styles.popUpText}>{ getRandomInt(1000, 8000)}</Text>
+                          <Text style={styles.popUpText}><Icon name='flame' style={{fontSize: 20, color: '#ccc'}} />{ getRandomInt(1000, 8000)}</Text>
                       </View>
                       <View style={{ marginRight: 10 }}>
-                        <Text style={styles.popUpText}>{ getRandomInt(1, 100)}</Text>
+                         <Text style={styles.popUpText}><Icon name='chatboxes' style={{fontSize: 20, color: '#ccc'}} /> { getRandomInt(1, 100)}</Text>
                       </View>
                       <View>
-                      <Text style={styles.popUpText} >{ getRandomInt(1, 100)}</Text>
+                         <Text style={styles.popUpText}><Icon name='pizza' style={{fontSize: 20, color: '#ccc'}} />{ getRandomInt(1, 100)}</Text>
                       </View>
                     </View>
-                    <Text style={styles.popUpText} > Title: { this.props.content.title } </Text>
+                    <Text style={styles.popUpText} ><Icon name='person' style={{fontSize: 20, color: '#fff'}} /> { this.props.content.title } </Text>
                 </View>
             </View>)
     }
