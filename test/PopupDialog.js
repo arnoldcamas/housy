@@ -51,7 +51,6 @@ class PopupDialog extends Component {
     }
 }
 
-
 PopupDialog.propTypes = {
     content:PropTypes.shape({
         url: PropTypes.string.isRequired,
