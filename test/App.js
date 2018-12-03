@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Image, View, TouchableOpacity, Text, ScrollView } from 'react-native';
 import numeral from 'numeral';
 import styles from './styles';
+import PopupDialog from './PopupDialog';
 
 const urlAPI = "https://jsonplaceholder.typicode.com/photos";
 
@@ -14,6 +15,7 @@ export default class App extends Component{
       showModal: false,
       modalContent: null
     }
+    this.handleModalClose = this.handleModalClose.bind(this);
   }
 
   componentDidMount() {
@@ -89,44 +91,14 @@ export default class App extends Component{
      return cards;
   }
 
-  // TODO: create reusable component
-  PopupDialog = () => {
-    const { url, title } = this.state.modalContent;
-    return(
-      <View style={styles.popupDialogContainer}>
-          <View style={styles.popupDialogContent}>
-              <TouchableOpacity
-                style={styles.popupCloseBtn}
-                onPress={() => this.setState({ showModal: false, modalContent: null }) }
-              >
-                 <Text> Close </Text>
-              </TouchableOpacity>
-              <Image
-                style={{width: 300, height: 300 }}
-                source={{uri: url }}
-              />
-              <View style={styles.popupContents}>
-                <View style={{ marginRight: 10 }} >
-                    <Text style={styles.popUpText}>{ this.getRandomInt(1000, 8000)}</Text>
-                </View>
-                <View style={{ marginRight: 10 }}>
-                  <Text style={styles.popUpText}>{ this.getRandomInt(1, 100)}</Text>
-                </View>
-                <View>
-                <Text style={styles.popUpText} >{ this.getRandomInt(1, 100)}</Text>
-                </View>
-              </View>
-              <Text style={styles.popUpText} > Title: { title } </Text>
-          </View>
-      </View>
-    )    
+  handleModalClose() {
+    this.setState({ showModal: false, modalContent: null })
   }
 
   render() {
-    // only show content when only mounted
     return this.state.photos  ? (
       <View>
-        { this.state.showModal && this.PopupDialog() }
+        { this.state.showModal && <PopupDialog content={this.state.modalContent} callback={this.handleModalClose} /> }
         {/* Apply scrollview since content will big huge */}
          <ScrollView>  
             <View style={styles.container}>
