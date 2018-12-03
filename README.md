@@ -8,6 +8,9 @@ to test
 - open ios folder , then open xcode project
 - click run using iPhone6s simulator
 
+notes:
+- not totally finish
+
 
 ## preview
 - ![preview](https://i.imgur.com/VRt34cn.png)
