@@ -22,6 +22,7 @@ export default {
     },
     photoInfo: {
         marginRight: 10,
+        marginTop: 10,
     },
     cardsContainer: {
         marginTop: 10,
@@ -50,12 +51,20 @@ export default {
     },
     popupContents: {
         flexDirection: 'row',
-        marginRight: '-45%',
+        marginRight: '-35%',
         marginBottom: 20,
         paddingTop: 10,
     },
     popUpText: { 
         color: '#FFF'
+    },
+    iconStyle: {
+        fontSize: 20, 
+        color: '#222'
+    },
+    iconStyle2: {
+        fontSize: 20, 
+        color: '#ccc'
     }
   };
   

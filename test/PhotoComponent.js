@@ -34,13 +34,13 @@ class PhotoComponent extends Component {
               </TouchableOpacity>
               <View style={styles.photoContents}>
                 <View style={styles.photoInfo}>
-                  <Text><Icon name='flame' style={{fontSize: 20, color: '#222', marginRight: 10}} />{ getRandomInt(1000, 8000)}</Text>
+                  <Text><Icon name='flame' style={styles.iconStyle} />{`  ${getRandomInt(1000, 8000)}`}</Text>
                 </View>
                 <View style={styles.photoInfo}>
-                  <Text><Icon name='chatboxes' style={{fontSize: 20, color: '#222'}} /> { getRandomInt(1, 100)}</Text>
+                  <Text><Icon name='chatboxes' style={styles.iconStyle} />{`  ${getRandomInt(1, 100)}`}</Text>
                 </View>
                 <View style={styles.photoInfo}>
-                  <Text><Icon name='pizza' style={{fontSize: 20, color: '#222'}} />{ getRandomInt(1, 100)}</Text>
+                  <Text><Icon name='pizza' style={styles.iconStyle} />{`  ${ getRandomInt(1, 100)}`}</Text>
                 </View>
               </View>   
             </View>

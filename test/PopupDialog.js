@@ -37,16 +37,16 @@ class PopupDialog extends Component {
                     />
                     <View style={styles.popupContents}>
                       <View style={{ marginRight: 10 }} >
-                          <Text style={styles.popUpText}><Icon name='flame' style={{fontSize: 20, color: '#ccc'}} />{ getRandomInt(1000, 8000)}</Text>
+                          <Text style={styles.popUpText}><Icon name='flame' style={styles.iconStyle2} />{`  ${getRandomInt(1000, 8000)}`}</Text>
                       </View>
                       <View style={{ marginRight: 10 }}>
-                         <Text style={styles.popUpText}><Icon name='chatboxes' style={{fontSize: 20, color: '#ccc'}} /> { getRandomInt(1, 100)}</Text>
+                         <Text style={styles.popUpText}><Icon name='chatboxes' style={styles.iconStyle2} />{`  ${getRandomInt(1, 100)}`}</Text>
                       </View>
                       <View>
-                         <Text style={styles.popUpText}><Icon name='pizza' style={{fontSize: 20, color: '#ccc'}} />{ getRandomInt(1, 100)}</Text>
+                         <Text style={styles.popUpText}><Icon name='pizza' style={styles.iconStyle2} />{`  ${ getRandomInt(1, 100)}`}</Text>
                       </View>
                     </View>
-                    <Text style={styles.popUpText} ><Icon name='person' style={{fontSize: 20, color: '#fff'}} /> { this.props.content.title } </Text>
+                    <Text style={styles.popUpText} ><Icon name='person' style={styles.iconStyle2} />{`  ${this.props.content.title }`}</Text>
                 </View>
             </View>)
     }
